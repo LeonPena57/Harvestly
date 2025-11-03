@@ -1,42 +1,84 @@
-#root {
-  max-width: 1280px;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  /* Color Pallate */
+  --color-primary: #689c45;
+  --color-secondary: #d7e1b7;
+  --color-secondary-50: #ebf0d6;
+  --color-accent: #634120;
+  --color-accent-80: #82674b;
+  --color-accent-60: #a18d75;
+  --color-light: #fffff5;
+  --color-dark: #201912;
+  --color-dark-80: #4c4740;
+  --color-dark-60: #79756d;
+  --color-gray: #666665;
+
+  /* Text Styles */
+  --font-family-body: "Inter", sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-base: 16px;
+  --spacing-lg: 20px;
+  --spacing-xl: 32px;
+
+  /* Border Radius */
+  --border-radius-sm: 6px;
+  --border-radius-base: 12px;
+  --border-radius-max: 100px;
+
+  /* Misc */
+  --border-width-sm: 1px;
+  --border-width-md: 2px;
+  --border-width-lg: 4px;
+}
+
+.app-shell {
+  max-width: 430px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  height: 100vh;
+  position: relative;
+  background-color: var(--color-light);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+a {
+  color: inherit;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.app-shell nav {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  width: 100%;
+  ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: var(--spacing-base) var(--spacing-lg);
   }
-  to {
-    transform: rotate(360deg);
+
+  svg {
+    height: 44px;
+    width: 44px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+main {
+  height: 100%;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.home-page {
+  padding: 16px;
 }
