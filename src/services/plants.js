@@ -11,11 +11,17 @@ export async function createPlant(plant) {
   return data;
 }
 
-export async function listPlants() {
-  const { data, error } = await supabase
+export async function listPlants(userId) {
+  let query = supabase
     .from("plants")
     .select("*")
     .order("inserted_at", { ascending: false });
+
+  if (userId) {
+    query = query.eq("user_id", userId);
+  }
+
+  const { data, error } = await query;
   if (error) throw error;
   return data;
 }
