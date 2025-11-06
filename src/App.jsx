@@ -8,6 +8,7 @@ import ForumPage from "./pages/ForumPage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
 import OnboardingPage from "./pages/OnboardingPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
+import HeadwearPage from "./pages/HeadwearPage.jsx";
 
 function App() {
   return (

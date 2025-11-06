@@ -3,31 +3,26 @@ import { useNavigate } from "react-router-dom";
 
 export default function HeadwearPage() {
   const navigate = useNavigate();
-  const goBack = () => navigate(-1);
 
   return (
     <div className="headwear-page">
-      {/* Top Bar */}
-      <div className="hw-header">
-        <button className="back-btn" onClick={goBack}>←</button>
+      <div className="headwear-header">
+        <button className="back-btn" onClick={() => navigate(-1)}>←</button>
         <div className="seed-count">
           <span>🌱</span> 199
         </div>
       </div>
 
-      {/* Title */}
-      <div className="hw-title">
-        Character Customization
-      </div>
+      <h2 className="section-title">Headwear</h2>
 
-      {/* Grid */}
-      <div className="hw-grid">
-        {Array.from({ length: 9 }).map((_, i) => (
-          <div className="hw-item" key={i} role="button" tabIndex="0">
-            <div className="image-placeholder" />
-            <p className="item-name">Text Here</p>
-            <p className="price">
-              🌱 99
+      <div className="items-grid">
+        {/* Temporary demo */}
+        {[...Array(9)].map((_, i) => (
+          <div key={i} className="item-card">
+            <div className="img-placeholder"></div>
+            <p className="item-title">Text Here</p>
+            <p className="item-price">
+              🌱 <span>99</span>
             </p>
           </div>
         ))}
