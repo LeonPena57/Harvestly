@@ -37,7 +37,9 @@ export default function HomePage() {
   useEffect(() => {
     let abort = false;
 
-    if (!session) {
+    const userId = session?.user?.id;
+
+    if (!session || !userId) {
       setPlants([]);
       setPlantsError(null);
       return;
@@ -46,7 +48,7 @@ export default function HomePage() {
     setPlantsLoading(true);
     setPlantsError(null);
 
-    listPlants()
+    listPlants(userId)
       .then((items) => {
         if (!abort) setPlants(items);
       })
