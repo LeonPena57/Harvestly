@@ -20,6 +20,7 @@ function App() {
           <Route path="/forum" element={<ForumPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/onboarding" element={<OnboardingPage />} />
+          <Route path="/headwear" element={<HeadwearPage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
